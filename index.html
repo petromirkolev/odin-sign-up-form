@@ -26,40 +26,69 @@
           aliquam, expedita unde accusamus maxime voluptatum aspernatur
           exercitationem deleniti quod hic neque.
         </h2>
-        <form action="#" class="sign-up-form">
+        <form action="#" class="sign-up-form" id="sign-up-form">
           <h1>Sign me up!</h1>
           <div class="col1">
             <label for="first-name">First name</label>
-            <input type="text" id="first-name" placeholder="John" />
+            <input
+              type="text"
+              id="first-name"
+              placeholder="e.g. John"
+              pattern="[A-Za-z]+"
+              title="Your first name should contain letters only."
+              required
+            />
             <label for="email">Email</label>
             <input
               type="email"
               name="email"
               id="email"
-              placeholder="john@smith.com"
+              placeholder="e.g. john@smith.com"
+              title="Please provide a valid email address e.g. john@smith.com"
+              required
             />
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
+            <!-- Mockup password lengths -->
+            <input
+              type="password"
+              name="password"
+              id="password"
+              minlength="6"
+              required
+            />
           </div>
           <div class="col2">
             <label for="last-name">Last name</label>
-            <input type="text" id="last-name" placeholder="Smith" />
+            <input
+              type="text"
+              id="last-name"
+              placeholder="e.g. Smith"
+              pattern="[A-Za-z]+"
+              title="Your last name should contain letters only."
+              required
+            />
             <label for="phone-number">Phone number</label>
             <input
               type="tel"
               name="phone-number"
               id="phone-number"
-              placeholder="888888"
+              pattern="[0-9]+"
+              placeholder="e.g. 123456"
+              title="Your phone number should contain numbers only."
+              required
             />
             <label for="confirm-password">Confirm password</label>
+            <!-- Mockup password lengths -->
             <input
               type="password"
               name="confirm-password"
               id="confirm-password"
+              minlength="6"
+              required
             />
           </div>
         </form>
-        <button class="submit-form">Create account</button>
+        <button class="submit-form" form="sign-up-form">Create account</button>
         <p class="have-account">
           Already have an account? <a href="#">Log in</a>
         </p>
