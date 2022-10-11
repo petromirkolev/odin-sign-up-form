@@ -10,14 +10,14 @@ Simple sign up page built with HMTL5 and CSS3
 
 # 🔨 To-Do
 
-- [ ] Create design
-- [ ] Apply styling
 - [ ] Make website responsive
+- [ ] Add JavaScript
+- [ ] Add custom error messages
 
 ### ✔ Done
 
-- [x]
-- [x]
+- [x] Create design
+- [x] Apply styling
 
 # 📖 Debugging notes
 
