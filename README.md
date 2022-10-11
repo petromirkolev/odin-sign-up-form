@@ -2,7 +2,7 @@
 
 Simple sign up page built with HMTL5 and CSS3
 
-[▶ Live Preview](N/A)
+[▶ Live Preview](https://petromirkolev.github.io/TOP_Project_sign-up-form/)
 
 # 🚀Features
 
