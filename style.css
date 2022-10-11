@@ -1,7 +1,6 @@
 /*
 CSS Reset
 */
-
 html,
 body,
 div,
@@ -128,17 +127,26 @@ table {
 }
 
 /* Begin styling */
+/* Import font */
 @font-face {
   font-family: "major-mono";
   src: url(fonts/MajorMonoDisplay-Regular.ttf);
 }
-
 body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+/* CSS Variables */
+:root {
+  --custom-font: "major-mono", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+/* Page layput */
 .form-container {
   display: flex;
   background-color: #fff;
@@ -166,52 +174,85 @@ body {
   left: 50%;
   top: 30%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.6);
   color: black;
   width: 100%;
   height: 20%;
-  font-family: "major-mono", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: var(--custom-font);
   font-size: 3rem;
 }
-
+/* Form design */
 .description {
   padding: 12% 5% 0 5%;
-
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 1.5rem;
-  height: 30%;
-  background-color: gray;
+  font-size: 1.1rem;
+  height: 20%;
+  background-color: rgba(128, 128, 128, 0.1);
 }
 form > h1 {
-  padding: 0 0 5% 0;
-  font-family: "major-mono", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 2rem;
+  margin: 5% 0 5% 5%;
+  font-family: var(--custom-font);
+  font-size: 1.7rem;
   letter-spacing: -1px;
 }
 .col1,
 .col2 {
+  margin: 0 5% 0 5%;
   display: flex;
   flex-direction: column;
-  width: 49%;
+  width: 39%;
   float: left;
 }
+/* Form inputs styling */
 form label {
+  text-align: center;
   margin-bottom: 5px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 form input {
-  margin-right: 70px;
-  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
   height: 30px;
   border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: transform 100ms ease-in-out;
 }
-
+::-webkit-input-placeholder {
+  text-align: center;
+}
+::-moz-placeholder {
+  text-align: center;
+}
+form input:focus {
+  outline-color: black;
+  transform: scale(1.1);
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.05);
+  background-color: rgba(184, 135, 11, 0.1);
+}
+/* Create account button styling */
+button {
+  margin: 2% 5% 0 5%;
+  height: 5%;
+  width: 25%;
+  border-radius: 8px;
+  border: none;
+  background-color: darkgoldenrod;
+  color: white;
+  font-size: 1.2em;
+  transition: transform 100ms ease-in-out;
+}
+button:hover {
+  transform: scale(1.1) translateX(5%);
+}
+button:focus {
+  transform: scale(1.1) translateX(5%);
+  outline-color: black;
+}
+button:active {
+  transform: scale(1.2) translateX(8.5%);
+}
+/* Text below create account button */
+.have-account {
+  margin: 8% 5% 0 5%;
+}
 /* Footer styling */
 footer {
   display: flex;
